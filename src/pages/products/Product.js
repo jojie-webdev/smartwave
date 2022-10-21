@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 
 import { getProducts } from "../../services/product";
-import List from "./partials/LIst";
+import List from "./partials/List";
 import OrderStatus from './partials/OrderStatus'
 
 const CreateOrder = () => {
