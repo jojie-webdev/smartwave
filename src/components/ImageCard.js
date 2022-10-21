@@ -1,15 +1,7 @@
-import { useState } from 'react';
 import { Box, Image } from '@chakra-ui/react'
 import { FaRegHeart } from "react-icons/fa";
 
-const ImageCard = ({id, src}) => {
-
-  const [hearts, setHearts] = useState([]);
-
-  const handleClickProductSave = (e) => {
-    e.preventDefault();
-    setHearts(oldHearts => [...oldHearts, id])
-  }
+const ImageCard = ({hearts, handleClickProductSave, name, src}) => {
 
   return (
     <Box
@@ -34,8 +26,8 @@ const ImageCard = ({id, src}) => {
           <FaRegHeart
             size="30"
             cursor="pointer"
-            color={`${hearts.includes(id) ? '#19b2a7' : '#000' }`}
-            onClick={(e) => handleClickProductSave(e, id)}
+            color={`${hearts.includes(name) ? '#19b2a7' : '#000' }`}
+            onClick={(e) => handleClickProductSave(e, name)}
           />
         </Box>
       </Box>
